@@ -8,7 +8,11 @@
 <body>
     <h1>HEYE</h1>
     <h2 th:text="${titulo}"></h2>
-    <h3 th:text="${user.nombre}"></h3>
-    <h3 th:text="${user.apellido}"></h3>
+    <ul>
+        <li th:text="${user.nombre}"></li>
+        <li th:text="${user.apellido}"></li>
+        <li th:text="${user.email}" th:text="${user.email}"></li>
+        <li th:if="${user.email == null}" th:text="${'El usuario no tiene email'}"></li>
+    </ul>
 </body>
 </html>
